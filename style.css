@@ -1,0 +1,280 @@
+:root {
+    --cl-bg-Light-red: hsl(0, 100%, 67%, 0.1);
+    --cl-bg-Orangey-yellow: hsl(39, 100%, 56%, 0.1);
+    --cl-bg-Green-teal: hsl(166, 100%, 37%, 0.1);
+    --cl-bg-Cobalt-blue: hsl(234, 85%, 45%, 0.1);
+    
+    --cl-Light-red: hsl(0, 100%, 67%);
+    --cl-Orangey-yellow: hsl(39, 100%, 56%);
+    --cl-Green-teal: hsl(166, 100%, 37%);
+    --cl-Cobalt-blue: hsl(234, 85%, 45%);
+
+
+
+    --cl-White: hsl(0, 0%, 100%);
+    --cl-Pale-blue: hsl(221, 100%, 96%);
+    --cl-Light-lavender: hsl(241, 100%, 89%);
+    --cl-Dark-gray-blue: hsl(224, 30%, 27%);
+
+    --cl-gradient_1-bg: hsl(252, 100%, 67%);
+    --cl-gradient_2-bg: hsl(241, 81%, 54%);
+
+    --cl-gradient_1-circle: hsla(256, 72%, 46%, 1);
+    --cl-gradient_2-circle: hsla(241, 72%, 46%, 0);
+}
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+
+/*** General styling ***/
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    max-width: 90rem;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: var(--cl-White);
+}
+
+p {
+    font-size: 1.125rem;
+}
+
+.main {
+    max-width: 45.625rem;
+    min-height: 32rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: var(--cl-White);
+    border-radius: 2.5rem;
+    box-shadow: 0px 10px 40px hsl(224, 30%, 27%, 0.2);
+}
+
+/*** Main left side ***/
+.main__left-side {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50.6%;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2.5rem;
+    background-image: linear-gradient(hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 82%);
+}
+
+.main__left-side h1 {
+    margin-top: 2rem;
+    font-size: clamp(1.15rem, 3vw, 1.5rem);    font-weight: 500;
+    color: var(--cl-Pale-blue);
+}
+
+.main__circle {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.main__circle-first {
+    font-size: clamp(3.3rem, 5vw, 4.7rem);    
+    font-weight: 700;
+    color: var(--cl-White);
+    padding: 0;
+    margin: 0;
+}
+
+.main__circle-last {
+    min-width: 100%;
+    color: var(--cl-Light-lavender);
+    margin-top: -1rem;
+
+}
+
+.main__left-side h2 {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: var(--cl-White);
+    margin-bottom: 0.6rem;
+}
+
+.main__left-side p:last-child {
+    width: 72%;
+    text-align: center;
+    line-height: 1.3;
+    color: var(--cl-Light-lavender);
+}
+
+
+/*** Main right side ***/
+.main__right-side {
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.main__right-side h2 {
+    font-size: 1.5rem;
+    color: var(--cl-Dark-gray-blue);
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.main__right-side ul {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 0;
+}
+
+.main__right-side ul li {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    height: 2rem;
+    padding: 1.7rem 1.2rem;
+    margin-bottom: 1rem;
+    border-radius: 0.7rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.reaction {
+    background-color: var(--cl-bg-Light-red);
+    color: var(--cl-Light-red);
+}
+
+.reaction::before {
+    content: url("./assets/images/icon-reaction.svg");
+    margin-right: -4.8rem;
+    margin-top: 0.313rem;
+}
+
+
+.span-first {
+    color: var(--cl-Dark-gray-blue);
+}
+
+.span-last {
+    color: var(--cl-Light-lavender);
+}
+
+.memory {
+    background-color: var(--cl-bg-Orangey-yellow);
+    color: var(--cl-Orangey-yellow);
+}
+
+.memory::before {
+    content: url("./assets/images/icon-memory.svg");
+    margin-right: -4.8rem;
+    margin-top: 0.313rem;
+}
+
+.verbal {
+    background-color: var(--cl-bg-Green-teal);
+    color: var(--cl-Green-teal);
+}
+
+.verbal::before {
+    content: url("./assets/images/icon-verbal.svg");
+    margin-right: -6rem;
+    margin-top: 0.313rem;
+}
+
+.visual {
+    background-color: var(--cl-bg-Cobalt-blue);
+    color: var(--cl-Cobalt-blue);
+}
+
+.visual::before {
+    content: url("./assets/images/icon-visual.svg");
+    margin-right: -6.2rem;
+    margin-top: 0.313rem;
+}
+
+#btn {
+    width: 90%;
+    padding: 0.9rem;
+    margin-top: 1.7rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    background-color: var(--cl-Dark-gray-blue);
+    color: var(--cl-Pale-blue);
+}
+
+#btn:hover {
+    cursor: pointer;
+    background-image: linear-gradient(hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 82%);
+
+}

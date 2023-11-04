@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="queries.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="main__left-side">
+      <h1>Your Result</h1>
+      <div class="main__circle">
+        <p class="main__circle-first">76</p>
+        <p class="main__circle-last">of 100</p>
+      </div>
+      <h2>Great</h2>
+      <p>You scored higher than 65% of the people who have taken these tests.</p>
+    </div>
+
+    <div class="main__right-side">
+      <h2>Summary</h2>
+      <ul>
+        <li class="reaction">Reaction<span class="reaction__span"><span class="span-first">80</span><span class="span-last"> / 100</span></span></li>
+        <li class="memory">Memory<span class="memory__span"><span class="span-first">92</span><span class="span-last"> / 100</span></span></li>
+        <li class="verbal">Verbal<span class="verbal__span"><span class="span-first">61</span><span class="span-last"> / 100</span></span></li>
+        <li class="visual">Visual<span class="visual__span"><span class="span-first">72</span><span class="span-last"> / 100</span></span></li>
+      </ul>
+
+      <button type="button" id="btn">Continue</button>
+    </div>
+
+
+  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/Bredis79">Luboš Bräth</a>.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
